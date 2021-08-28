@@ -39,7 +39,15 @@ const App = () => {
 
   return (
     <div>
-      <Translate />
+      {/* <Accordion items={items} /> */}
+      <Dropdown
+        label="Select a Language"
+        options={options}
+        selected={selected}
+        onSelectedChange={setSelected}
+      />
+      {/*  <Search /> */}
+      {/* <Translate /> */}
     </div>
   );
 };

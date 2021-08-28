@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
 const Dropdown = ({ label, options, selected, onSelectedChange }) => {
   const [open, setOpen] = useState(false);
@@ -11,10 +11,11 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
       }
       setOpen(false);
     };
-    document.body.addEventListener("click", onBodyClick, { capture: true });
+    //https://reactjs.org/blog/2020/08/10/react-v17-rc.html#fixing-potential-issues
+    document.body.addEventListener('click', onBodyClick, { capture: true });
 
     return () => {
-      document.body.removeEventListener("click", onBodyClick, {
+      document.body.removeEventListener('click', onBodyClick, {
         capture: true,
       });
     };
@@ -42,11 +43,11 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
         <label className="label">{label}</label>
         <div
           onClick={() => setOpen(!open)}
-          className={`ui selection dropdown ${open ? "visible active" : ""}`}
+          className={`ui selection dropdown ${open ? 'visible active' : ''}`}
         >
           <i className="dropdown icon"></i>
           <div className="text">{selected.label}</div>
-          <div className={`menu ${open ? "visible transition" : ""}`}>
+          <div className={`menu ${open ? 'visible transition' : ''}`}>
             {renderedOptions}
           </div>
         </div>
