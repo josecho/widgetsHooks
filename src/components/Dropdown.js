@@ -11,6 +11,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
       }
       setOpen(false);
     };
+    //https://reactjs.org/blog/2020/08/10/react-v17-rc.html#fixing-potential-issues
     document.body.addEventListener("click", onBodyClick, { capture: true });
 
     return () => {
