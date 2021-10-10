@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
+import Pagination from './components/Pagination';
 
 const items = [
   {
@@ -21,21 +22,70 @@ const items = [
 
 const options = [
   {
-    label: 'The Color Red',
-    value: 'red',
+    label: 'January',
+    value: 'Jan',
   },
   {
-    label: 'The Color Green',
-    value: 'green',
+    label: 'Febrero',
+    value: 'Feb',
   },
   {
-    label: 'A Shade of Blue',
-    value: 'blue',
+    label: 'marzo',
+    value: 'mar',
+  },
+  {
+    label: 'april',
+    value: 'apr',
+  },
+  {
+    label: 'mayo',
+    value: 'may',
+  },
+  {
+    label: 'junio',
+    value: 'xun',
+  },
+  {
+    label: 'july',
+    value: 'jul',
+  },
+  {
+    label: 'augustu',
+    value: 'aug',
+  },
+  {
+    label: 'setember',
+    value: 'sep',
+  },
+  {
+    label: 'octoberr',
+    value: 'oct',
+  },
+  {
+    label: 'nov',
+    value: 'nov',
+  },
+  {
+    label: 'dec',
+    value: 'dec',
   },
 ];
 
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
+
+
+  const [month, setMotnh] = useState();
+
+  useEffect(() => {
+    const index = options.findIndex(x => x.value === selected.value);
+    setMotnh(index);
+    console.log("index:", index);
+  }, [selected]);
+
+  function handlePageChange(newPage) {
+    console.log("new page:", newPage)
+  }
 
   return (
     <div>
@@ -48,6 +98,7 @@ const App = () => {
       />
       {/*  <Search /> */}
       {/* <Translate /> */}
+      <Pagination month={month} onPageChange={handlePageChange} />
     </div>
   );
 };
