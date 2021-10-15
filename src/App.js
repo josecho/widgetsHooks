@@ -4,6 +4,7 @@ import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
 import Pagination from './components/Pagination';
+import { useBreakpoints, useCurrentWidth } from './hooks/useBreakpoints';
 
 const items = [
   {
@@ -73,6 +74,13 @@ const options = [
 
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
+  let width = useCurrentWidth();
+  let { xs, sm, md, lg } = useBreakpoints({
+    xs: { min: 0, max: 360 },
+    sm: { min: 361, max: 960 },
+    md: { min: 961, max: 1400 },
+    lg: { min: 1401, max: null },
+  });
 
 
   const [month, setMotnh] = useState();
@@ -88,18 +96,29 @@ const App = () => {
   }
 
   return (
-    <div>
-      {/* <Accordion items={items} /> */}
-      <Dropdown
-        label="Select a Language"
-        options={options}
-        selected={selected}
-        onSelectedChange={setSelected}
-      />
-      {/*  <Search /> */}
-      {/* <Translate /> */}
-      <Pagination month={month} onPageChange={handlePageChange} />
-    </div>
+    <>
+      <div>
+        {/* <Accordion items={items} /> */}
+        <Dropdown
+          label="Select a Language"
+          options={options}
+          selected={selected}
+          onSelectedChange={setSelected}
+        />
+        {/*  <Search /> */}
+        {/* <Translate /> */}
+        <Pagination month={month} onPageChange={handlePageChange} />
+      </div>
+      <div>
+        <h1>
+          {`Current width -> ${width}`}
+        </h1>
+        <p>
+          {`Breakpoint: xs(${xs}) sm(${sm}) md(${md}) lg(${lg})`}
+        </p>
+      </div>
+    </>
+
   );
 };
 export default App;
