@@ -1,7 +1,6 @@
 LOCATE COURSE CODE:
 
 Toggle switch button
-
 https://www.sitepoint.com/react-toggle-switch-reusable-component/
 
 Curso ------------------------------------Modern React with Redux
@@ -20,9 +19,10 @@ useRef
 
 170. Optional Video - Fixing a Warning useEffect dependency
      181 - Binding an Event Hanlder dropdown
-171. Reminder on Event Bubbling (manual addEvenListener has preference over the rest)
 
-https://reactjs.org/blog/2020/08/10/react-v17-rc.html#fixing-potential-issues
+171. Reminder on Event Bubbling (manual addEvenListener has preference over the rest)
+     Important update for Event Listeners
+     https://reactjs.org/blog/2020/08/10/react-v17-rc.html#fixing-potential-issues
 
 Hooks in Practice 208. Overview
 https://github.com/josecho/VideoHooks/tree/master/src
@@ -33,6 +33,7 @@ Sección 2: Typescript: Types Around Props and State
 Sección 3: Types Around Events and Refs
 Sección 4: Typescript with Redux
 
+Others:
 Developing responsive layouts with React Hooks
 https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/
 flexobox
