@@ -4,10 +4,6 @@ Toggle switch button
 
 https://www.sitepoint.com/react-toggle-switch-reusable-component/
 
-Chat robot
-
-https://github.com/eddienubes/react-styled-chat-widget
-
 Curso ------------------------------------Modern React with Redux
 Understanding Hooks in React
 useState
@@ -24,7 +20,7 @@ useRef
 
 170. Optional Video - Fixing a Warning useEffect dependency
      181 - Binding an Event Hanlder dropdown
-171. Reminder on Event Bubbling
+171. Reminder on Event Bubbling (manual addEvenListener has preference over the rest)
 
 https://reactjs.org/blog/2020/08/10/react-v17-rc.html#fixing-potential-issues
 
