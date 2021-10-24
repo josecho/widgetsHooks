@@ -1,3 +1,4 @@
+josecho/widgetsHooks
 LOCATE COURSE CODE:
 
 Toggle switch button
@@ -17,12 +18,15 @@ useRef
 
     A Google Translate API component
 
-170. Optional Video - Fixing a Warning useEffect dependency
-     181 - Binding an Event Hanlder dropdown
+150. Search widget
+151. Optional Video - Fixing a Warning useEffect dependency. Search.js
+152. XSS Attacks in React
+153. Throttling API Request (setTimeout/ clearTimeout / setDebouncedTerm)
 
-171. Reminder on Event Bubbling (manual addEvenListener has preference over the rest)
+154. Reminder on Event Bubbling (manual addEvenListener has preference over the rest)
      Important update for Event Listeners
      https://reactjs.org/blog/2020/08/10/react-v17-rc.html#fixing-potential-issues
+155. Binding an Event Hanlder dropdown
 
 Hooks in Practice 208. Overview
 https://github.com/josecho/VideoHooks/tree/master/src
