@@ -96,17 +96,22 @@ const App = () => {
   }
 
   return (
+
+
+    <Search />
+
+
+  );
+
+  /* return (
     <>
       <div>
-        {/* <Accordion items={items} /> */}
         <Dropdown
           label="Select a Language"
           options={options}
           selected={selected}
           onSelectedChange={setSelected}
         />
-        {/*  <Search /> */}
-        {/* <Translate /> */}
         <Pagination month={month} onPageChange={handlePageChange} />
       </div>
       <div>
@@ -118,7 +123,13 @@ const App = () => {
         </p>
       </div>
     </>
+  ); */
 
-  );
+
+
+
+
+
+
 };
 export default App;
